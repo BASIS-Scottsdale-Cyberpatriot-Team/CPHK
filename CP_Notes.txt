@@ -1,0 +1,76 @@
+General Things to change:
+
+Password History	5	1.1.1
+Max Password Age	30	1.1.2
+Min Pass Age		10	1.1.3
+Min Pass Length		8	1.1.4
+Complexity Reqs		Enable	1.1.5	N/A
+Reversable Encryption	Disable	1.1.6	N/A
+
+Account Lockout Dur	30	1.2.1
+Account Lockout Thresh	10	1.2.2	N/A
+Rset Act Lockout Cntr	30	1.2.3
+
+
+Open Action Center: Click Start → Control Panel → System and Security → Action Center
+
+Turn on Firewall
+Change Firewall Exceptions: Control Panel → System and Security → Windows Firewall
+
+Turn on Update: Control Panel → System and Security → Windows Update
+
+Add Password to Admin Acct
+Change Admin Acct Name	2.3.1.5	adminBOI
+Change Guest Acct Name	2.3.1.6	guestBOI
+Disable Guest Account: Control Panel → User Accounts → Add or remove user accounts
+
+Add, Remove, OP, and deOP users
+
+
+Audit Policies-
+2.3.2.1	Audit: Force audit policy subcategory settings to override audit policy category settings	(Set to 0 and config manually)
+
+Remove all of 17 (17.1.1 to 17.9.5)
+
+NEED TO CONFIGURE BELOW AUDIT POLICY MANUALLY ATM!!!
+
+Windows 10:
+Account Logon Events
+Account Management
+Logon Events
+Policy Change
+Process Tracking
+System Events
+
+Server:
+Account Logon Events
+Account Management
+Directory Service Access
+Logon Events
+Object Access
+Policy Change
+Privilege Use
+Process Tracking
+System Events
+
+
+Lookup Processes to check if mal: www.processlibrary.com
+
+Disable Unnecessary and Insecure Services
+
+
+Check Other Logged on Users
+
+Malware running as Svchost
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Svchost
+cmd: tasklist /svc /fi "imagename eq svchost.exe" >> svchost.txt
+Just use Process Explorer
+
+Don't Display Last User Name on Login Screen	2.3.7.2
+Require Ctrl Alt Del before signing in		2.3.7.1
+
+Restrict Remote Access to the Registry
+
+
+
+Users start at 19.X on Server
